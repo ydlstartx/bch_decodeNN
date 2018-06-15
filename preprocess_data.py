@@ -1,7 +1,4 @@
-#! /Users/ydl/miniconda3/envs/keras/bin/python
 
-# 用于将原始的码字转换为变量节点的初始信息
-# 使用方式: ./preprocess_data -n n -k k -t t -odset
 import numpy as np
 import argparse
 
@@ -19,16 +16,15 @@ args = parser.parse_args()
 n = args.n
 k = args.k
 t = args.t
-# 要处理的数据集
+
 original_data_set = args.odset
-# 处理后的数据集，就是对于args.odset去掉中间的‘set’
+
 processed_data_set = args.odset.split('_')[0] + '_' +args.odset.split('_')[2]
 
-# 对于该参数的BCH数据集的根目录
 folder_path = "../datasets/bch_%d_%d_%d/"%(n,k,t)
-# 原始数据在数据集根目录下的目录
+
 itrainx_path = "original/" + original_data_set + ".txt"
-# 处理完的数据集放到数据集的根目录中
+
 otrainx_path = processed_data_set + ".txt"
 
 def initial_value(err_rate, y):
