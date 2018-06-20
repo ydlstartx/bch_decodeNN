@@ -1,5 +1,7 @@
-毕业设计，未完待续。。。
+preprocess_data.py: used to convert the {0,1} codeword to LLR information.
 
-有一大问题，解决不了可能就要换课题。。。
+set_mask_matrix_1.py: use the input parity check matrix to generate five mask matrix used to build the non-fully connect network.
 
-现在都没敢和导师坦白。。。
+create_model_1.py: used to build the correspond soft BP decoder.
+
+model_train_1.py: used to train the network, it contains some generator to generate batch data from some large .txt file.
